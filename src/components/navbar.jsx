@@ -7,6 +7,8 @@ export const LINKS = [
     { href: "#experience", label: "Навички" },
     { href: "#work", label: "Проекти" },
     { href: "#contact", label: "Контакти" },
+    // { href: "#", label: "UA" },
+    // { href: "#", label: "ENG" },
 ];
 
 const Navbar = () => {

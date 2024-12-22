@@ -3,7 +3,7 @@ import {RiGithubLine,RiMailLine, RiTelegram2Fill, RiFileDownloadLine} from "@rem
 
 
 export const CONTACT_CONTENT = {
-    headline: "Зв'язатися зі мною",
+    headline: "Контакти",
     description:
         "З нетерпінням чекаю на можливість працювати разом та створювати щось інноваційне!",
     email: "anisimovsergii@gmail.com",

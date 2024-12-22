@@ -5,7 +5,11 @@ import Projects from "./components/projects.jsx";
 import About from "./components/about.jsx";
 import Skills from "./components/skills.jsx";
 import Contacts from "./components/contacts.jsx";
+import 'flowbite';
+import BentoBlock from "./components/BentoBlock.jsx";
+import BentoGrid from "./components/BentoGird.jsx";
 
+0
 export default function App() {
   return (
       <>
@@ -15,7 +19,8 @@ export default function App() {
       <Navbar/>
       <Hero/>
       <About/>
-      <Skills/>
+      {/*<Skills/>*/}
+      <BentoGrid/>
       <Projects/>
       <Contacts/>
       </main>

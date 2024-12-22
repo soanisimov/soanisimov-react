@@ -20,19 +20,19 @@ const BlurBackground = React.memo(() => {
     }), []);
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[180px]">
+        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[300px]">
             <motion.div
-                className="bg-blue-500 w-[380px] h-[280px] rounded-full absolute"
+                className="bg-blue-600 w-[380px] h-[280px] rounded-full absolute"
                 variants={circleVariants}
                 animate="animate4"
             />
             <motion.div
-                className="bg-sky-600 w-[390px] h-[290px] rounded-full absolute"
+                className="bg-purple-800 w-[390px] h-[290px] rounded-full absolute"
                 variants={circleVariants}
                 animate="animate5"
             />
             <motion.div
-                className="bg-blue-600 w-[400px] h-[300px] rounded-full absolute"
+                className="bg-blue-800 w-[400px] h-[300px] rounded-full absolute"
                 variants={circleVariants}
                 animate="animate6"
             />

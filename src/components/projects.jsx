@@ -80,7 +80,7 @@ const Projects = () => {
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10">Проекти</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {PROJECTS.map((project , index) => (
+              {PROJECTS.map((project, index) => (
                   <motion.div
                       key={index}
                       className="relative rounded-lg overflow-hidden h-[500px] transition transform"
@@ -89,25 +89,28 @@ const Projects = () => {
                       viewport={{once: true}}
                       variants={projectsVariants}
                   >
-                      <img
-                          src={project.image}
-                          alt={project.name}
-                          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-70"
-                      />
+                      {/*<img*/}
+                      {/*    src={project.image}*/}
+                      {/*    alt={project.name}*/}
+                      {/*    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-70"*/}
+                      {/*/>*/}
                       <div
-                          className="relative z-20 p-6 flex flex-col justify-between h-full bg-black/20 text-white">
-                          <h2 className="text-3xl font-medium mb-4">{project.name}<p className="text-sm text-blue-300/70">{project.powered_by}</p>
+                          className="relative z-20 p-6 flex flex-col justify-between h-full rounded-3xl bg-gradient-to-br from-blue-500/30 to-purple-950/20 text-white">
+                          <h2 className="text-3xl font-medium mb-4">{project.name}<p
+                              className="text-sm text-blue-300/70">{project.powered_by}</p>
                           </h2>
 
                           <div className="flex flex-col justify-between">
                               <p className="mb-4 flex-grow text-2xl">{project.description}</p>
-                              <a href={project.link} target="_blank" rel="noopener noreffer" className="flex items-center justify-center gap-1 bg-white text-stone-950 rounded-3xl py-2 px-2 w-45 text-sm  hover:bg-blue-500 hover:text-white transition duration-150 text-center">{project.link_icon_git} {project.link_text} </a>
+                              <a href={project.link} target="_blank" rel="noopener noreffer"
+                                 className="flex items-center justify-center gap-1 bg-white text-stone-950 rounded-3xl py-2 px-2 w-45 text-sm  hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white transition-all duration-150 text-center">{project.link_icon_git} {project.link_text} </a>
                           </div>
                       </div>
                   </motion.div>
               ))}
           </div>
       </section>
+
   )
 }
 export default Projects;

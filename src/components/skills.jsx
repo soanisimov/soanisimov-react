@@ -25,7 +25,7 @@ const SkillsProgress = React.memo(() => {
     }), []);
 
     return (
-        <section className="px-6 py-10" id="experience">
+        <section className="px-6 py-10">
             <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10">Навички</h1>
             <div className="max-w-7xl mx-auto bg-black/10 p-5 rounded-2xl filter backdrop-blur-[200px]">
                 {SKILLS.map((skill) => (
@@ -35,16 +35,16 @@ const SkillsProgress = React.memo(() => {
                         initial="hidden"
                         className="text-xl md:text-2xl lg:text-3xl mb-6 leading-relaxed"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{once: true, amount: 0.5}}
                     >
                         <p className="text-sm md:text-2xl leading-relaxed mb-0.5">
                             {skill.name}
                         </p>
-                        <div className="w-full rounded-full h-5">
+                        <div className="w-full rounded-full h-5" id="experience">
                             <div className="w-full bg-sky-600/40 rounded-full h-4 mb-[-60px]">
                                 <div
                                     className="rounded-full h-4 bg-blue-500"
-                                    style={{ width: `${skill.level}%` }}
+                                    style={{width: `${skill.level}%`}}
                                 />
                             </div>
                         </div>
