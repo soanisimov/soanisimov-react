@@ -24,13 +24,11 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
             >
-                <div className="h-full flex flex-col md:flex-row items-center text-center md:text-left">
-                    {/* Иконка: скрыта на мобильных, показывается на больших экранах */}
+                <div className="h-full flex flex-row items-center">
                     <Icon
                         className={`hidden md:block w-10 h-10 text-${colorClass}-500 group-hover:scale-110 group-hover:text-${colorClass}-200 transition-all mr-2 duration-300`}
                     />
-                    {/* Текст: центрируется на мобильных */}
-                    <div className="flex flex-col flex-grow">
+                    <div className="flex flex-col text-center flex-grow">
                         <h3
                             className={`text-2xl font-bold text-${colorClass}-400 group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-2`}
                         >
