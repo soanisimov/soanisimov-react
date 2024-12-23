@@ -29,7 +29,7 @@ export const CONTACT_CONTENT = {
             icon: "RiFileDownloadLine",
         }
     ],
-    footerText: `Анісімов Сергій • ${new Date().getFullYear()}`,
+    footerText: `Сергій Анісімов • ${new Date().getFullYear()}`,
 };
 
 const Contacts = () => {
@@ -54,7 +54,7 @@ const Contacts = () => {
             </motion.p>
 
 
-            <div className="flex space-x-6 mt-8">
+            <div className="flex space-x-6 mt-8 ">
                 {CONTACT_CONTENT.socialLinks.map((link, index) => {
                     const Icon =
                         link.icon === "RiTwitterXFill"
@@ -88,6 +88,7 @@ const Contacts = () => {
                             whileInView="visible"
                             custom={1.0 + index * 0.2}
                             variants={iconVariants}
+                            className="hover:scale-125 transition-all duration-300 "
                         >
                             <Icon size={70}/>
                         </motion.a>

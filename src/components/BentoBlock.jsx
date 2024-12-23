@@ -14,8 +14,8 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
 
     return (
         <div
-            className={`bg-gradient-to-r from-${colorClass}-600/30 to-${colorClass}-800/80 rounded-3xl p-10 group
-                hover:bg-gradient-to-r hover:from-${colorClass}-500/30 hover:to-${colorClass}-600/100 transition-all duration-300
+            className={`bg-gradient-to-r from-${colorClass}-600/40 to-${colorClass}-800/90 rounded-3xl p-10 group
+                hover:bg-gradient-to-r hover:from-${colorClass}-600/50 hover:to-${colorClass}-600/100 transition-all duration-300
                 ${span ? 'md:col-span-2' : ''}`}
         >
             <motion.div
