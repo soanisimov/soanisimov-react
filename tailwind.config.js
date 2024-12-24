@@ -17,11 +17,11 @@ export default {
   ],
   safelist: [
     {
-      pattern: /(bg|text|from|to)-(orange|blue|yellow|cyan|green|red|indigo|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)/,
+      pattern: /(bg|text|from|to)-(sky|orange|blue|yellow|cyan|green|red|indigo|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)/,
       variants: ['hover'],
     },
     {
-      pattern: /(from|to)-(orange|blue|yellow|cyan|green|red|indigo|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)\/(30|50)/,
+      pattern: /(from|to)-(sky|orange|blue|yellow|cyan|green|red|indigo|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)\/(30|50)/,
     },
   ],
 }

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     Code2, FileJson, Terminal, Cpu, Database, Coffee,
     CircleEqual, Hash, Palette, Figma, PenTool, Brain,
-    Code, FileCode,SquareChevronRight,
+    Code, FileCode,SquareChevronRight,Wind,
 } from 'lucide-react';
 import BentoBlock from './BentoBlock';
 
@@ -14,9 +14,9 @@ const BentoGrid = () => {
         { title: 'JavaScript', icon: Terminal, colorClass: 'yellow' },
         { title: 'React', icon: Cpu, colorClass: 'cyan' },
         { title: 'Node.js', icon: Database, colorClass: 'green' },
-        { title: 'Java', icon: Coffee, colorClass: 'red', span: true },
+        { title: 'Tailwind', icon: Wind, colorClass: 'sky', span: true },
         { title: 'Python', icon: SquareChevronRight, colorClass: 'indigo' },
-        { title: 'C#', icon: Hash, colorClass: 'purple' },
+        { title: 'Java', icon: Coffee, colorClass: 'red' },
         { title: 'Photoshop', icon: Palette, colorClass: 'blue' },
         { title: 'Illustrator', icon: PenTool, colorClass: 'orange' },
         { title: 'Figma', icon: Figma, colorClass: 'pink', span: true },

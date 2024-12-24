@@ -103,7 +103,7 @@ const Projects = () => {
                           <div className="flex flex-col justify-between">
                               <p className="mb-4 flex-grow text-2xl">{project.description}</p>
                               <a href={project.link} target="_blank" rel="noopener noreffer"
-                                 className="flex items-center justify-center gap-1 bg-white text-stone-950 rounded-3xl py-2 px-2 w-45 text-sm  hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white transition-all duration-150 text-center">{project.link_icon_git} {project.link_text} </a>
+                                 className="flex items-center justify-center gap-1 bg-white text-stone-950 rounded-3xl py-2 px-2 w-45 text-sm  hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-white transition-all duration-150 text-center">{project.link_icon_git} {project.link_text} </a>
                           </div>
                       </div>
                   </motion.div>

@@ -44,7 +44,7 @@ const Hero = () => {
                     <motion.p className="text-xl md:text-2xl lg:text-4xl mb-4" variants={textVariants}>
                         {HERO_CONTENT.introduction}
                     </motion.p>
-                    <motion.a className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-2xl hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white transition duration-300" href={HERO_CONTENT.resumeLink} download rel="noopener noreferrer" target="_blank" variants={textVariants}>
+                    <motion.a className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-3xl hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-white transition duration-300" href={HERO_CONTENT.resumeLink} download rel="noopener noreferrer" target="_blank" variants={textVariants}>
                         {HERO_CONTENT.resumeLinkText}
                     </motion.a>
                 </motion.div>
