@@ -57,7 +57,7 @@ const Hero = () => {
                     </motion.p>
                     <motion.p className="text-xl md:text-2xl lg:text-5xl mb-4 " variants={textVariants}>
                         <span
-                            className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-500 to-purple-500">{HERO_CONTENT.developer}</span>
+                            className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-500 to-violet-500">{HERO_CONTENT.developer}</span>
                     </motion.p>
                     <motion.a
                         className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-3xl hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white transition duration-300"
@@ -66,10 +66,13 @@ const Hero = () => {
                         {HERO_CONTENT.resumeLinkText}
                     </motion.a>
                     <motion.a
-                        className="ml-5 text-gray-300/80 hover:text-gray-200/100 transition duration-300 "
+                        className="ml-2 md:ml-4 sm:ml-4 text-gray-300/80 hover:text-gray-200/100 inline-flex transition duration-300 md:flex-col"
                         href="#about"
                         variants={textVariants}>
-                        {HERO_CONTENT.continue}<ArrowRight className="inline-flex ml-2"/>
+                        <div className="flex flex-row mt-3">
+                        {HERO_CONTENT.continue}
+                        <ArrowRight className="ml-1"/>
+                        </div>
                     </motion.a>
                 </motion.div>
 
