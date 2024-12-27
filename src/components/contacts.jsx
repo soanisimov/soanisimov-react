@@ -43,7 +43,7 @@ const Contacts = () => {
     }
     return(
         <section className="min-h-screen flex flex-col justify-center px-4 md:px-10">
-            <motion.h3 className="text-6xl md:text-8xl leading-none" initial="hidden" whileInView="visible"
+            <motion.h3 className="text-6xl md:text-8xl leading-none font-bold" initial="hidden" whileInView="visible"
                        variants={textVariants}>
                 {CONTACT_CONTENT.headline}
             </motion.h3>

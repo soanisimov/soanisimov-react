@@ -6,6 +6,8 @@ import projectimg3 from "../assets/projectimg3.png"
 import projectimg4 from "../assets/projectimg4.png"
 import projectimg5 from "../assets/projectimg5.png"
 import {RiGithubFill} from "@remixicon/react"
+import {Emoji, EmojiProvider} from "react-apple-emojis";
+import emojiData from "react-apple-emojis/src/data.json";
 
 export const PROJECTS = [
     {
@@ -15,6 +17,7 @@ export const PROJECTS = [
         link: "https://gafigaf.github.io/newdiskr.html",
         link_text:"Перейти на сайт",
         powered_by:"HTML, CSS, JS",
+        emoji: "abacus",
     },
     {
         name: "Квадрат суми / різниці",
@@ -23,6 +26,7 @@ export const PROJECTS = [
         link: "https://gafigaf.github.io/kvadrat.html",
         link_text:"Перейти на сайт",
         powered_by:"HTML, CSS, JS",
+        emoji: "abacus",
     },
     {
         name: "Різниця квадратів",
@@ -31,6 +35,7 @@ export const PROJECTS = [
         link: "https://gafigaf.github.io/r_k.html",
         link_text:"Перейти на сайт",
         powered_by:"HTML, CSS, JS",
+        emoji: "abacus",
     },
     {
         name: "Tic-tac-toe",
@@ -40,6 +45,8 @@ export const PROJECTS = [
         link_text:"Подивитись на GitHub",
         link_icon_git: <RiGithubFill></RiGithubFill>,
         powered_by:"React",
+        emoji: "video-game",
+
     },
     {
         name: "JavaFX Maths",
@@ -49,15 +56,17 @@ export const PROJECTS = [
         link_text:"Подивитись на GitHub",
         link_icon_git: <RiGithubFill></RiGithubFill>,
         powered_by:"Java",
+        emoji: "desktop-computer",
     },
     {
         name: "Schedule bot",
-        description: "Бот створений для відображення поточного розкладу Київського столичного університету ім. Бориса Грінченка",
+        description: "Бот для відображення розкладу Київського столичного університету ім. Бориса Грінченка",
         image: projectimg4,
         link: "https://github.com/soanisimov/Schedule-bot",
         link_text:"Подивитись на GitHub",
         link_icon_git: <RiGithubFill></RiGithubFill>,
         powered_by:"Python",
+        emoji: "robot",
     },
 ];
 
@@ -79,31 +88,30 @@ const Projects = () => {
       <section className="px-6 py-10" id="work">
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10">Проекти</h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {PROJECTS.map((project, index) => (
-                  <motion.div
-                      key={index}
-                      className="relative rounded-lg overflow-hidden h-[500px] transition transform"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{once: true}}
-                      variants={projectsVariants}
-                  >
-                      {/*<img*/}
-                      {/*    src={project.image}*/}
-                      {/*    alt={project.name}*/}
-                      {/*    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-70"*/}
-                      {/*/>*/}
-                      <div
-                          className="relative z-20 p-6 flex flex-col justify-between h-full rounded-3xl bg-gradient-to-br from-blue-500/30 to-purple-950/20 text-white">
-                          <h2 className="text-3xl font-medium mb-4">{project.name}<p
-                              className="text-sm text-blue-300/70">{project.powered_by}</p>
-                          </h2>
+                  <motion.div key={index} className=""
+                              initial="hidden" whileInView="visible" viewport={{once: true}}
+                              variants={projectsVariants}>
 
-                          <div className="flex flex-col justify-between">
-                              <p className="mb-4 flex-grow text-2xl">{project.description}</p>
-                              <a href={project.link} target="_blank" rel="noopener noreffer"
-                                 className="flex items-center justify-center gap-1 bg-white text-stone-950 rounded-3xl py-2 px-2 w-45 text-sm  hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-white transition-all duration-150 text-center">{project.link_icon_git} {project.link_text} </a>
+                      <div
+                          className="group flex flex-col h-full bg-stone-900/40 shadow-sm rounded-3xl">
+                          <div className="h-52 flex flex-col justify-center items-center bg-gradient-to-bl from-blue-500 to-purple-700 rounded-t-xl">
+                              <div className="p-6 bg-white rounded-3xl">
+                              <EmojiProvider data={emojiData}><Emoji name={project.emoji} className="w-20 md:w-20 lg:w-20 hover:scale-110 transition-all duration-300"/></EmojiProvider>
+                              </div>
+                          </div>
+
+                          <div className="p-4 md:p-6">
+                              <span
+                                  className="block mb-1 text-xs font-semibold text-blue-400">{project.powered_by}</span>
+                              <h3 className="text-2xl font-bold text-white">{project.name}</h3>
+                              <p className="mt-3 text-white">{project.description}</p>
+                          </div>
+                          <div
+                              className="mt-auto flex">
+                              <a className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-b-3xl font-medium bg-stone-900/30 hover:bg-white hover:text-stone-900 transition-all duration-300"
+                                 href={project.link} target="_blank" rel="noopener noreffer"> {project.link_icon_git} {project.link_text}</a>
                           </div>
                       </div>
                   </motion.div>
