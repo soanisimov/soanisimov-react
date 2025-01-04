@@ -10,7 +10,14 @@ export default {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'custom-radial': 'radial-gradient(transparent 1px, #ffffff 1px)',
+      },
+      colors: {
+        'custom-color': 'rgb(15, 17, 21)',
+      },
+    },
   },
   plugins: [
     flowbite,

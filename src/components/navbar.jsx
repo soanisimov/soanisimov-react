@@ -19,12 +19,11 @@ const Navbar = () => {
     return (
 
         <nav className="fixed top-0 left-0 w-full z-50">
-            <div
-                className="flex justify-between items-center max-w-6xl mx-auto md:my-2 bg-stone-950/15 p-4 md:rounded-xl backdrop-blur-[100px]">
+            <div className="flex justify-between items-center my-2 max-w-[77rem] mx-auto p-4 md:rounded-xl 0 bg-transparent  backdrop-blur-[50px] opacity-100 bg-[radial-gradient(rgba(0,0,0,0.3)_1px,transparent_1px)] bg-[size:3px_3px]">
                 <div className="text-white font-semibold text-lg ">
-                    <a href="/">Сергій Анісімов
+                    <a href="#">Сергій Анісімов
                     </a>
-                </div>
+            </div>
                 <div className="hidden md:flex space-x-8">
                     {LINKS.map((link, index) => (
                         <a href={link.href} key={index}

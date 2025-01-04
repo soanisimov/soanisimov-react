@@ -29,7 +29,7 @@ const BentoGrid = () => {
             <h1 className="text-6xl md:text-6xl font-medium tracking-tight mb-10" id="experience">
                 Навички
             </h1>
-            <div className="max-w-full mx-auto" >
+            <div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 rounded-3xl">
                     {blocks.map((block, index) => (
                         <BentoBlock
