@@ -25,8 +25,8 @@ const BentoGrid = () => {
     ];
 
     return (
-        <section className="min-h-screen flex flex-col justify-center px-2 md:px-10">
-            <h1 className="text-6xl md:text-6xl font-medium tracking-tight mb-10" id="experience">
+        <section className="px-6 py-20">
+            <h1 className="text-4xl md:text-6xl mb-10 font-medium tracking-tight" id="experience">
                 Навички
             </h1>
             <div>
