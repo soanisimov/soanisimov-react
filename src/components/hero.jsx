@@ -56,7 +56,7 @@ const Hero = () => {
                         {HERO_CONTENT.introduction}
                     </motion.p>
                     <motion.p className="text-3xl md:text-3xl lg:text-5xl mb-4" variants={textVariants}>
-                        <span className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-violet-600 via-blue-500 to-violet-600">{HERO_CONTENT.developer}</span>
+                        <span className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-500 to-violet-600">{HERO_CONTENT.developer}</span>
                     </motion.p>
                     <motion.a
                         className="border-2 text-white hover:bg-white hover:text-black p-3 lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
