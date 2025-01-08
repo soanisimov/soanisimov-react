@@ -96,7 +96,7 @@ const Projects = () => {
 
                       <div
                           className="group flex flex-col h-full bg-stone-900/40 shadow-sm rounded-3xl">
-                          <div className="h-52 flex flex-col justify-center items-center bg-gradient-to-bl from-blue-500 to-purple-700 rounded-t-xl">
+                          <div className="h-52 flex flex-col justify-center items-center bg-gradient-to-t from-purple-800 to-blue-600 rounded-t-xl">
                               <div className="p-6 bg-white rounded-3xl">
                               <EmojiProvider data={emojiData}><Emoji name={project.emoji} className="w-20 md:w-20 lg:w-20 hover:scale-110 transition-all duration-300"/></EmojiProvider>
                               </div>
@@ -104,7 +104,7 @@ const Projects = () => {
 
                           <div className="p-4 md:p-6">
                               <span
-                                  className="block mb-1 text-xs font-semibold text-blue-400">{project.powered_by}</span>
+                                  className="block mb-1 text-xs font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-600">{project.powered_by}</span>
                               <h3 className="text-2xl font-bold text-white">{project.name}</h3>
                               <p className="mt-3 text-white">{project.description}</p>
                           </div>

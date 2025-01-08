@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion'; // Предполагается, что framer-motion установлен
+import { motion } from 'framer-motion';
 
 const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }) => {
     const progressLevel = useMemo(() => ({
@@ -14,8 +14,8 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
 
     return (
         <div
-            className={`bg-gradient-to-r from-${colorClass}-600/40 to-${colorClass}-800/90 rounded-3xl p-10 group 
-                hover:bg-gradient-to-r hover:from-${colorClass}-600/50 hover:to-${colorClass}-600/100 transition-all duration-300
+            className={`bg-gradient-to-r from-${colorClass}-600/70 to-${colorClass}-700/80 rounded-3xl p-10 group 
+                hover:bg-gradient-to-t hover:from-${colorClass}-600/100 hover:to-${colorClass}-600/100 transition-all duration-300
                 ${span ? 'md:col-span-2' : ''}`}
         >
             <motion.div
@@ -25,13 +25,8 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
                 viewport={{ once: true, amount: 0.5 }}
             >
                 <div className="h-full flex flex-row items-center">
-                    <Icon
-                        className={`hidden md:block w-10 h-10 text-${colorClass}-500 group-hover:scale-110 group-hover:text-${colorClass}-200 transition-all mr-2 duration-300`}
-                    />
                     <div className="flex flex-col text-center flex-grow">
-                        <h3
-                            className={`text-2xl font-bold text-${colorClass}-400 group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-2`}
-                        >
+                        <h3 className={`text-2xl font-bold text-${colorClass}-400 group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-2`}>
                             {title}
                         </h3>
                         <p className="text-gray-300">{description}</p>
@@ -44,8 +39,6 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
 
 BentoBlock.propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    icon: PropTypes.elementType.isRequired,
     colorClass: PropTypes.string.isRequired,
     span: PropTypes.bool,
 };

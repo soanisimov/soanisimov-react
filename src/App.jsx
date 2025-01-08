@@ -8,6 +8,7 @@ import Contacts from "./components/contacts.jsx";
 import 'flowbite';
 import BentoBlock from "./components/BentoBlock.jsx";
 import BentoGrid from "./components/BentoGird.jsx";
+import Languages from "./components/languages.jsx";
 
 0
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
       <About/>
       {/*<Skills/>*/}
       <BentoGrid/>
+      <Languages/>
       <Projects/>
       <Contacts/>
       </main>

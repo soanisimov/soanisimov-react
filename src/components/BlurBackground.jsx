@@ -32,12 +32,12 @@ const BlurBackground = React.memo(() => {
     return (
         <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[300px]">
             <motion.div
-                className="bg-blue-700/90 w-[400px] h-[400px] rounded-full absolute"
+                className="bg-blue-700/70 w-[400px] h-[400px] rounded-full absolute"
                 variants={circleVariants}
                 animate="animate4"
             />
             <motion.div
-                className="bg-purple-700/90 w-[400px] h-[400px] rounded-full absolute"
+                className="bg-purple-700/70 w-[400px] h-[400px] rounded-full absolute"
                 variants={circleVariants}
                 animate="animate6"
             />

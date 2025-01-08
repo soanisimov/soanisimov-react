@@ -18,16 +18,14 @@ const About = () => {
         offset: ["start 0.9", "start 0.25"]
     });
 
-    const text = "Я студент третього курсу, навчаюсь на спеціальності комп'ютерна інженерія. Маю практичний досвід у розробці сайтів, веб-додатків, ботів. Прагну саморозвитку, тому створюю власні pet projects , намагаюся вивчати та практикувати щось нове та корисне. Готовий розвиватися і працювати над собою, хочу бути невідʼємною частиною крутої команди!";
+    const text = "Я студент третього курсу, навчаюсь на спеціальності комп'ютерна інженерія. Маю практичний досвід у розробці сайтів, веб-додатків, ботів. Прагну саморозвитку, тому створюю власні pet projects, намагаюся вивчати та практикувати щось нове та корисне. Готовий розвиватися і працювати над собою, хочу бути невідʼємною частиною крутої команди!";
 
     const words = text.split(" ");
 
     return (
         <section className="px-6 py-20" >
             <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10" id="about">Про мене</h1>
-            <p
-                ref={container}
-                className="flex flex-wrap text-xl md:text-2xl lg:text-3xl max-w-7xl text-white leading-relaxed"
+            <p ref={container} className="flex flex-wrap text-xl md:text-2xl lg:text-3xl max-w-7xl text-white leading-relaxed"
             >
                 {words.map((word, i) => {
                     const start = i / words.length;

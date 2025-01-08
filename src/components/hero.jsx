@@ -42,8 +42,7 @@ const imageVariants = {
 const Hero = () => {
     return (
         <section>
-            <div
-                className="relative z-10 min-h-screen  flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
+            <div className="relative z-10 min-h-screen  flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
                 <motion.div className="w-full md:w-1/2 p-8" initial="hidden" animate="visible"
                             variants={contentVariants}>
                     <motion.h1 className="text-3xl md:text-3xl lg:text-6xl my-8 font-medium" variants={textVariants}>
@@ -57,22 +56,13 @@ const Hero = () => {
                         {HERO_CONTENT.introduction}
                     </motion.p>
                     <motion.p className="text-3xl md:text-3xl lg:text-5xl mb-4" variants={textVariants}>
-                        <span className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-500 to-violet-500">{HERO_CONTENT.developer}</span>
+                        <span className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-violet-600 via-blue-500 to-violet-600">{HERO_CONTENT.developer}</span>
                     </motion.p>
                     <motion.a
-                        className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-3xl hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white transition duration-300"
+                        className="border-2 text-white hover:bg-white hover:text-black p-3 lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
                         href={HERO_CONTENT.resumeLink} download rel="noopener noreferrer" target="_blank"
                         variants={textVariants}>
                         {HERO_CONTENT.resumeLinkText}
-                    </motion.a>
-                    <motion.a
-                        className="ml-2 md:ml-4 sm:ml-4 text-gray-300/80 hover:text-gray-200/100 inline-flex transition duration-300 md:flex-col"
-                        href="#about"
-                        variants={textVariants}>
-                        <div className="flex flex-row mt-3">
-                        {HERO_CONTENT.continue}
-                        <ArrowRight className="ml-1"/>
-                        </div>
                     </motion.a>
                 </motion.div>
 
