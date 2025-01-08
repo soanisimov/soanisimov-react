@@ -23,15 +23,14 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
+                className="flex items-center justify-center w-full"
             >
-                <div className="h-full flex flex-row items-center">
                     <div className="flex flex-col text-center flex-grow">
-                        <h3 className={`text-2xl font-bold text-${colorClass}-400 group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-2`}>
+                        <h3 className={`text-2xl font-bold text-${colorClass}-400 group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-3`}>
                             {title}
                         </h3>
                         <p className="text-gray-300">{description}</p>
                     </div>
-                </div>
             </motion.div>
         </div>
     );
