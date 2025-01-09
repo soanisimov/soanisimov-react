@@ -73,15 +73,16 @@ export const PROJECTS = [
 const Projects = () => {
     const projectsVariants = {
         hidden:{
-            opacity: 0,
+            y:50,opacity: 0,
         },
         visible:{
+            y:0,
             opacity: 1,
             transition: {
                 duration: 0.6,
                 ease: "easeInOut",
-                // type:"spring",
             }
+
         }
     }
   return (

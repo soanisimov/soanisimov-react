@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import { motion } from 'framer-motion';
 import BentoBlock from './BentoBlock';
 import {Emoji, EmojiProvider} from "react-apple-emojis";
@@ -8,7 +8,7 @@ const BentoGrid = () => {
     const blocks = [
         { title: 'HTML', colorClass: 'orange',},
         { title: 'CSS', colorClass: 'blue' },
-        { title: 'JavaScript', colorClass: 'yellow',span: true },
+        { title: 'JavaScript', colorClass: 'amber',span: true },
         { title: 'React', colorClass: 'cyan',span: true },
         { title: 'Node.js', colorClass: 'green' },
         { title: 'Tailwind CSS', colorClass: 'sky',},
@@ -16,6 +16,7 @@ const BentoGrid = () => {
         { title: 'Illustrator', colorClass: 'orange' },
         { title: 'Figma', colorClass: 'pink',span: true,},
     ];
+
 
     return (
         <section className="px-6 py-20">
@@ -25,12 +26,7 @@ const BentoGrid = () => {
             <div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 rounded-3xl">
                     {blocks.map((block, index) => (
-                        <BentoBlock
-                            key={index}
-                            title={block.title}
-                            colorClass={block.colorClass}
-                            span={block.span}
-                        />
+                        <BentoBlock key={index} title={block.title} colorClass={block.colorClass} span={block.span}/>
                     ))}
                 </div>
             </div>
