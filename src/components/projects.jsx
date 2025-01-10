@@ -11,28 +11,10 @@ import emojiData from "react-apple-emojis/src/data.json";
 
 export const PROJECTS = [
     {
-        name: "Дискримінант",
-        description: "Призначений для обчислення дискримінанта за формулою: D=b²-4*a*c",
+        name: "Калькулятори формул",
+        description: "Калькулятори для Дискримінанту, Квадрату суми/різниці та Різниці квадратів",
         image: projectimg,
-        link: "https://gafigaf.github.io/newdiskr.html",
-        link_text:"Перейти на сайт",
-        powered_by:"HTML, CSS, JS",
-        emoji: "abacus",
-    },
-    {
-        name: "Квадрат суми / різниці",
-        description: "Призначений для обчислення квадрата суми за формулою: (a±b)²",
-        image: projectimg2,
-        link: "https://gafigaf.github.io/kvadrat.html",
-        link_text:"Перейти на сайт",
-        powered_by:"HTML, CSS, JS",
-        emoji: "abacus",
-    },
-    {
-        name: "Різниця квадратів",
-        description: "Призначений для обчислення різниці квадратів за формулою: (a-b)(a+b) = a²+b²",
-        image: projectimg3,
-        link: "https://gafigaf.github.io/r_k.html",
+        link: "https://gafigaf.github.io/math.html",
         link_text:"Перейти на сайт",
         powered_by:"HTML, CSS, JS",
         emoji: "abacus",
