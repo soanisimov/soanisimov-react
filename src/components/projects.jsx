@@ -20,6 +20,14 @@ export const PROJECTS = [
         emoji: "abacus",
     },
     {
+        name: "Коди регіонів",
+        description: "Визначення коду регіону України відповідно до перших літер у автомобільному номері",
+        link: "https://soanisimov.github.io/plate_check/nomera.html",
+        link_text:"Перейти на сайт",
+        powered_by:"HTML, CSS, JS",
+        emoji: "oncoming-automobile",
+    },
+    {
         name: "Tic-tac-toe",
         description: "Оновлена версія хрестики-нулики з офіційного туторіалу ReactJS",
         image: projectimg2,

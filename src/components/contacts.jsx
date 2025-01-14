@@ -25,7 +25,7 @@ export const CONTACT_CONTENT = {
         },
         {
             platform: "Resume",
-            url: "/resumeAnisimov.pdf",
+            url: "/CV_Sergii_Anisimov_Front_end.pdf",
             icon: "RiFileDownloadLine",
         }
     ],

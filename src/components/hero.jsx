@@ -13,7 +13,7 @@ export const HERO_CONTENT = {
     description:
         "Я студент третього курсу, маю практичний досвід у розробці сайтів, веб-додатків, ботів. Прагну саморозвитку. Готовий розвиватися і працювати над собою, хочу бути невідʼємною частиною крутої команди :)",
     resumeLinkText: "Завантажити резюме",
-    resumeLink: "/resumeAnisimov.pdf",
+    resumeLink: "/CV_Sergii_Anisimov_Front_end.pdf",
     continue:"Дізнатися більше",
 };
 
