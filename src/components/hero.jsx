@@ -6,7 +6,7 @@ import {ArrowDown, ArrowDownRight, ArrowRight, ArrowUp} from "lucide-react";
 
 
 export const HERO_CONTENT = {
-    greeting: "Привіт!",
+    greeting: "Привіт! ",
     introduction:
         "Я Сергій Анісімов, і це мій сайт-портфоліо як",
     developer:" Front End розробника",

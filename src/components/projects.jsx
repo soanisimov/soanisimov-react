@@ -11,6 +11,15 @@ import emojiData from "react-apple-emojis/src/data.json";
 
 export const PROJECTS = [
     {
+        name: "Персональний сайт-портфоліо",
+        description: "Персональний сайт-портфоліо",
+        image: projectimg,
+        link: "https://gafigaf.github.io/math.html",
+        link_text:"Перейти на сайт",
+        powered_by:"React, Tailwind CSS, Vite",
+        emoji: "technologist-light-skin-tone",
+    },
+    {
         name: "Калькулятори формул",
         description: "Калькулятори для Дискримінанту, Квадрату суми/різниці та Різниці квадратів",
         image: projectimg,
@@ -19,6 +28,7 @@ export const PROJECTS = [
         powered_by:"HTML, CSS, JS",
         emoji: "abacus",
     },
+
     {
         name: "Коди регіонів",
         description: "Визначення коду регіону України відповідно до перших літер у автомобільному номері",

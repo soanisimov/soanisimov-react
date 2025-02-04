@@ -25,12 +25,12 @@ const generateCircleVariants2 = (scale, x, y, duration) => ({
 
 const BlurBackground = React.memo(() => {
     const circleVariants = useMemo(() => ({
-        animate4: generateCircleVariants(2, 300, -200, 5),
-        animate6: generateCircleVariants2(1.6, 0, 0, 5)
+        animate4: generateCircleVariants(2.2, 300, -200, 5),
+        animate6: generateCircleVariants2(1.8, 0, 0, 5)
     }), []);
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[300px]">
+        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[250px]">
             <motion.div
                 className="bg-blue-700/70 w-[400px] h-[400px] rounded-full absolute"
                 variants={circleVariants}

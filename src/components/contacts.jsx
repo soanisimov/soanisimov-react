@@ -1,105 +1,77 @@
-import{motion} from "framer-motion";
-import {RiGithubLine,RiMailLine, RiTelegram2Fill, RiFileDownloadLine} from "@remixicon/react";
-
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { RiGithubLine, RiMailLine, RiTelegram2Fill, RiFileDownloadLine } from "@remixicon/react";
 
 export const CONTACT_CONTENT = {
     headline: "Контакти",
-    description:
-        "З нетерпінням чекаю на можливість працювати разом та створювати щось інноваційне!",
+    description: "З нетерпінням чекаю на можливість працювати разом та створювати щось інноваційне!",
     email: "anisimovsergii@gmail.com",
+    telegram:"@xlebokot1",
+    phone:"+38-097-950-80-68",
     socialLinks: [
-        {
-            platform: "Telegram",
-            url: "https://t.me/xlebokot1",
-            icon: "RiTwitterXFill",
-        },
-        {
-            platform: "GitHub",
-            url: "https://github.com/soanisimov",
-            icon: "RiGithubFill",
-        },
-        {
-            platform: "LinkedIn",
-            url: "mailto:anisimovsergii@gmail.com",
-            icon: "RiLinkedinFill",
-        },
-        {
-            platform: "Resume",
-            url: "/CV_Sergii_Anisimov_Front_end.pdf",
-            icon: "RiFileDownloadLine",
-        }
+        { platform: "Telegram", url: "https://t.me/xlebokot1", icon: RiTelegram2Fill },
+        { platform: "Телефон", url: "https://github.com/soanisimov", icon: RiGithubLine },
+        { platform: "Email", url: "mailto:anisimovsergii@gmail.com", icon: RiMailLine, text:"123" },
+        { platform: "Resume", url: "/CV_Sergii_Anisimov_Front_end.pdf", icon: RiFileDownloadLine }
     ],
     footerText: `Сергій Анісімов • ${new Date().getFullYear()}`,
+    footerTextFile: "Контакти у формі тексту",
 };
 
 const Contacts = () => {
-    const textVariants = {
-        hidden: {opacity: 0,},
-        visible: {opacity: 1,transition: {duration: 0.8, ease: 'easeInOut'}},
-    }
-    const iconVariants = {
-        hidden: {opacity: 0, },
-        visible: {opacity: 1, transition: {duration: 0.8, ease: 'easeInOut'}},
-    }
-    return(
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    return (
         <section className="min-h-screen flex flex-col justify-center px-4 md:px-10">
-            <motion.h3 className="text-6xl md:text-8xl leading-none font-bold" initial="hidden" whileInView="visible"
-                       variants={textVariants}>
+            <motion.h3 className="text-6xl md:text-8xl font-medium" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
                 {CONTACT_CONTENT.headline}
             </motion.h3>
 
-            <motion.p className="text-lg md:text-2xl mt-6 max-w-3xl" initial="hidden" variants={textVariants}
-                      whileInView="visible" id="contact">
+            <motion.p className="text-lg md:text-2xl mt-6 max-w-3xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
                 {CONTACT_CONTENT.description}
             </motion.p>
 
-
-            <div className="flex space-x-6 mt-8 ">
-                {CONTACT_CONTENT.socialLinks.map((link, index) => {
-                    const Icon =
-                        link.icon === "RiTwitterXFill"
-                            ? RiTelegram2Fill
-                            : link.icon === "RiGithubFill"
-                                ? RiGithubLine
-                                : link.icon === "RiFileDownloadLine"
-                                    ? RiFileDownloadLine
-                                    : RiMailLine;
-
-                    // Conditional rendering for download link
-                    const linkProps = link.icon === "RiFileDownloadLine"
-                        ? {
-                            href: link.url,
-                            download: link.downloadName || true,
-                            target: undefined,
-                            rel: undefined
-                        }
-                        : {
-                            href: link.url,
-                            target: "_blank",
-                            rel: "noopener noreferrer"
-                        };
-
-                    return (
-                        <motion.a
-                            key={link.platform}
-                            {...linkProps}
-                            aria-label={link.ariaLabel}
-                            initial="hidden"
-                            whileInView="visible"
-                            custom={1.0 + index * 0.2}
-                            variants={iconVariants}
-                            className="hover:scale-125 transition-all duration-300 "
-                        >
-                            <Icon size={70}/>
-                        </motion.a>
-                    );
-                })}
+            <div className="flex space-x-6 mt-8" id="contact">
+                {CONTACT_CONTENT.socialLinks.map((link, index) => (
+                    <motion.a
+                        key={link.platform}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: index * 0.2 }}
+                        className="hover:scale-110 transition-all duration-300"
+                    >
+                        <link.icon size={70} />
+                    </motion.a>
+                ))}
             </div>
-            <motion.p className="text-sm text-stone-200 mt-10" initial="hidden" variants={textVariants}
-            whileInView="visible">
+
+            <motion.p className="text-sm text-stone-200 mt-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
                 {CONTACT_CONTENT.footerText}
             </motion.p>
+
+            <button onClick={() => setModalOpen(true)} className="text-sm text-stone-200/80 text-left mt-2 hover:underline">
+                {CONTACT_CONTENT.footerTextFile}
+            </button>
+
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-black/40 backdrop-blur-xl flex items-center justify-center">
+                    <div className="bg-zinc-900 p-6 rounded-lg shadow-lg w-96 text-white">
+                        <h2 className="text-xl font-bold">Контактна інформація</h2>
+                        <p className="mt-4">Email: {CONTACT_CONTENT.email}</p>
+                        <p className="mt-4">Telegram: {CONTACT_CONTENT.telegram}</p>
+                        <p className="mt-4">Телефон: {CONTACT_CONTENT.phone}</p>
+                        <button onClick={() => setModalOpen(false)}
+                                className="mt-6 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
+                            Закрити
+                        </button>
+                    </div>
+                </div>
+            )}
         </section>
-    )
-}
-export default Contacts
+    );
+};
+
+export default Contacts;
