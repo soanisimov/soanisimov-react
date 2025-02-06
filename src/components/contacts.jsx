@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { RiGithubLine, RiMailLine, RiTelegram2Fill, RiFileDownloadLine } from "@remixicon/react";
+import { RiGithubLine, RiMailLine, RiTelegram2Fill, RiFileDownloadLine, RiLinkedinBoxFill,RiPhoneFill} from "@remixicon/react";
 
 export const CONTACT_CONTENT = {
     headline: "Контакти",
@@ -10,9 +10,13 @@ export const CONTACT_CONTENT = {
     phone:"+38-097-950-80-68",
     socialLinks: [
         { platform: "Telegram", url: "https://t.me/xlebokot1", icon: RiTelegram2Fill },
-        { platform: "Телефон", url: "https://github.com/soanisimov", icon: RiGithubLine },
+        { platform: "GitHub", url: "https://github.com/soanisimov", icon: RiGithubLine },
+        { platform: "LinkedIn",url: "https://www.linkedin.com/in/anisimov-sergii-44321934a/" ,icon: RiLinkedinBoxFill},
         { platform: "Email", url: "mailto:anisimovsergii@gmail.com", icon: RiMailLine, text:"123" },
-        { platform: "Resume", url: "/CV_Sergii_Anisimov_Front_end.pdf", icon: RiFileDownloadLine }
+        { platform: "Resume", url: "/CV_Sergii_Anisimov_Front_end.pdf", icon: RiFileDownloadLine },
+        // { platform: "Phone", url: "tel:+380979508068", icon: RiPhoneFill},
+
+
     ],
     footerText: `Сергій Анісімов • ${new Date().getFullYear()}`,
     footerTextFile: "Контакти у формі тексту",
