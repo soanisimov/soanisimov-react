@@ -15,6 +15,10 @@ export const HERO_CONTENT = {
     resumeLinkText: "Завантажити резюме",
     resumeLink: "/CV_Sergii_Anisimov_Front_end.pdf",
     continue:"Дізнатися більше",
+    telegram:"Telegram",
+    telegramLink:"https://t.me/xlebokot1",
+    mail:"Email",
+    mailLink:"mailto:anisimovsergi@gmail.com",
 };
 
 
@@ -41,14 +45,15 @@ const imageVariants = {
 
 const Hero = () => {
     return (
-        <section>
+        <section className="">
             <div className="relative z-10 min-h-screen  flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
                 <motion.div className="w-full md:w-1/2 p-8" initial="hidden" animate="visible"
                             variants={contentVariants}>
                     <motion.h1 className="text-3xl md:text-3xl lg:text-6xl my-8 font-medium" variants={textVariants}>
                         <div className="flex flex-row gap-4">
                             {HERO_CONTENT.greeting}<EmojiProvider data={emojiData}><Emoji
-                            name="waving-hand-light-skin-tone" className="w-[40px] h-[40px] md:w-[40px] md:h-[40px] lg:w-[60px] lg:h-[60px]"/></EmojiProvider>
+                            name="waving-hand-light-skin-tone"
+                            className="w-[40px] h-[40px] md:w-[40px] md:h-[40px] lg:w-[60px] lg:h-[60px]"/></EmojiProvider>
                         </div>
 
                     </motion.h1>
@@ -56,14 +61,29 @@ const Hero = () => {
                         {HERO_CONTENT.introduction}
                     </motion.p>
                     <motion.p className="text-3xl md:text-3xl lg:text-5xl mb-4" variants={textVariants}>
-                        <span className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-500 to-violet-600">{HERO_CONTENT.developer}</span>
+                        <span
+                            className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 to-violet-500">{HERO_CONTENT.developer}</span>
                     </motion.p>
-                    <motion.a
-                        className="border-2 text-white hover:bg-white hover:text-black p-3 lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
-                        href={HERO_CONTENT.resumeLink} download rel="noopener noreferrer" target="_blank"
-                        variants={textVariants}>
-                        {HERO_CONTENT.resumeLinkText}
-                    </motion.a>
+                    <div className="flex flex-row gap-2">
+                        <motion.a
+                            className="border-2 text-white hover:bg-white hover:text-black p-3 lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
+                            href={HERO_CONTENT.resumeLink} download rel="noopener noreferrer" target="_blank"
+                            variants={textVariants}>
+                            {HERO_CONTENT.resumeLinkText}
+                        </motion.a>
+                        <motion.a
+                            className="border-2  text-white hover:bg-white hover:text-black p-3 lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
+                            href={HERO_CONTENT.mailLink} download rel="noopener noreferrer" target="_blank"
+                            variants={textVariants}>
+                            {HERO_CONTENT.mail}
+                        </motion.a>
+                        <motion.a
+                            className="border-2 border-blue-500 text-white hover:bg-blue-500 hover:text-white p-3  lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
+                            href={HERO_CONTENT.telegramLink} download rel="noopener noreferrer" target="_blank"
+                            variants={textVariants}>
+                            {HERO_CONTENT.telegram}
+                        </motion.a>
+                    </div>
                 </motion.div>
 
                 <motion.div className="w-full md:w-1/2 p-8" initial="hidden" animate="visible" variants={imageVariants}>
