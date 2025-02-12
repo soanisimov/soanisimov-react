@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
 
         <nav className="fixed top-0 left-0 w-full z-50">
-            <div className="flex justify-between items-center max-w-[77rem] mx-auto my-0 md:my-2 p-2 md:p-3 md:rounded-xl 0 bg-transparent backdrop-blur-[50px] opacity-100">
+            <div className="flex justify-between items-center max-w-[77rem] mx-auto my-0 md:my-2 p-2 md:p-3 md:rounded-xl 0 bg-transparent backdrop-blur-[50px] opacity-99 ">
                 <div className="text-white font-semibold text-lg ">
                     <a href="#">Сергій Анісімов
                     </a>

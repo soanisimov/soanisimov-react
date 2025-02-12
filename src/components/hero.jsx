@@ -8,11 +8,12 @@ import {ArrowDown, ArrowDownRight, ArrowRight, ArrowUp} from "lucide-react";
 export const HERO_CONTENT = {
     greeting: "Привіт! ",
     introduction:
-        "Я Сергій Анісімов, і це мій сайт-портфоліо як",
-    developer:" Front End розробника",
+        "Я Сергій Анісімов,",
+    introduction2:"і це мій сайт-портфоліо",
+    developer:"Front-End розробника",
     description:
         "Я студент третього курсу, маю практичний досвід у розробці сайтів, веб-додатків, ботів. Прагну саморозвитку. Готовий розвиватися і працювати над собою, хочу бути невідʼємною частиною крутої команди :)",
-    resumeLinkText: "Завантажити резюме",
+    resumeLinkText: "Завантажити CV",
     resumeLink: "/CV_Sergii_Anisimov_Front_end.pdf",
     continue:"Дізнатися більше",
     telegram:"Telegram",
@@ -57,12 +58,15 @@ const Hero = () => {
                         </div>
 
                     </motion.h1>
-                    <motion.p className="text-3xl md:text-3xl lg:text-4xl mb-8 " variants={textVariants}>
+                    <motion.p className="text-3xl md:text-3xl lg:text-4xl mb-2 " variants={textVariants}>
                         {HERO_CONTENT.introduction}
+                    </motion.p>
+                    <motion.p className="text-3xl md:text-3xl lg:text-4xl mb-8 " variants={textVariants}>
+                        {HERO_CONTENT.introduction2}
                     </motion.p>
                     <motion.p className="text-3xl md:text-3xl lg:text-5xl mb-4" variants={textVariants}>
                         <span
-                            className="text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 to-violet-500">{HERO_CONTENT.developer}</span>
+                            className="text-transparent bg-clip-text font-bold bg-indigo-500">{HERO_CONTENT.developer}</span>
                     </motion.p>
                     <div className="flex flex-row gap-2">
                         <motion.a
@@ -78,7 +82,7 @@ const Hero = () => {
                             {HERO_CONTENT.mail}
                         </motion.a>
                         <motion.a
-                            className="border-2 border-blue-500 text-white hover:bg-blue-500 hover:text-white p-3  lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
+                            className="border-2 border-white text-white hover:bg-blue-500 hover:text-white p-3  lg:p-4 mt-8 inline-block rounded-3xl transition duration-300"
                             href={HERO_CONTENT.telegramLink} download rel="noopener noreferrer" target="_blank"
                             variants={textVariants}>
                             {HERO_CONTENT.telegram}

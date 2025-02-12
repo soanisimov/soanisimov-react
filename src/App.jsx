@@ -10,12 +10,13 @@ import BentoBlock from "./components/BentoBlock.jsx";
 import BentoGrid from "./components/BentoGird.jsx";
 import Languages from "./components/languages.jsx";
 import Courses from "./components/courses.jsx";
+import { Analytics } from "@vercel/analytics/react"
 
 0
 export default function App() {
   return (
       <>
-          <BlurBackground/>
+
       <Navbar/>
       <main className="antialiased overflow-x-hidden max-w-7xl mx-auto relative z-10">
       <Navbar/>
@@ -28,6 +29,7 @@ export default function App() {
       <Projects/>
       <Contacts/>
       </main>
+      <Analytics/>
       </>
   )
 }

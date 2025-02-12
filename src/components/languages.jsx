@@ -44,7 +44,7 @@ const Languages = () => {
                   {langs.map((lang) => (
                       <motion.div className="w-full flex" initial="hidden" whileInView="visible" viewport={{once: true}} variants={languageVariants}>
 
-                      <div className="bg-gradient-to-t from-purple-800 to-blue-600 p-6 w-full text-center rounded-3xl flex flex-col items-center">
+                      <div className="bg-indigo-600 p-6 w-full text-center rounded-3xl flex flex-col items-center">
                           <div className="bg-white p-4 rounded-3xl">
                               <EmojiProvider data={emojiData}><Emoji name={lang.emoji} className="w-24 h-24 hover:scale-110 transition-all duration-300"/></EmojiProvider>
                           </div>

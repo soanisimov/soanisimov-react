@@ -14,7 +14,7 @@ const BentoBlock = ({ title, description, icon: Icon, colorClass, span = false }
 
     return (
         <div
-            className={`bg-${colorClass}-700/100 rounded-3xl p-12 group ${span ? 'md:col-span-2' : ''}`}>
+            className={`bg-${colorClass}-600/90 rounded-3xl p-12 group ${span ? 'md:col-span-2' : ''}`}>
             <motion.div
                 variants={progressLevel}
                 initial="hidden"
