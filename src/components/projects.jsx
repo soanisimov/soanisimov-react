@@ -10,6 +10,7 @@ import {Emoji, EmojiProvider} from "react-apple-emojis";
 import emojiData from "react-apple-emojis/src/data.json";
 import {RiArrowRightUpLine} from "@remixicon/react";
 
+
 export const PROJECTS = [
     {
         name: "Персональний сайт-портфоліо",
@@ -123,6 +124,7 @@ const Projects = () => {
                   </motion.div>
               ))}
           </div>
+
       </section>
 
   )

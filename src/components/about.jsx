@@ -1,5 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import ScrollFloat from './ScrollFloat';
+
+
+
 
 const Word = ({ children, progress, range }) => {
     const opacity = useTransform(progress, range, [0, 1]);
@@ -26,7 +30,15 @@ const About = () => {
 
     return (
         <section className="px-6 py-20" >
-            <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10" id="about">Про мене</h1>
+            <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10" id="about">            <ScrollFloat
+                animationDuration={1}
+                ease='back.inOut(2)'
+                scrollStart='center bottom+=50%'
+                scrollEnd='bottom bottom-=40%'
+                stagger={0.03}
+            >
+                Про мене
+            </ScrollFloat></h1>
             <p ref={container} className="flex flex-wrap text-xl md:text-2xl lg:text-3xl max-w-7xl text-white leading-relaxed"
             >
                 {words.map((word, i) => {
@@ -40,6 +52,7 @@ const About = () => {
                 })}
             </p>
         </section >
+
     );
 };
 

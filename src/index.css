@@ -13,6 +13,11 @@
     scroll-behavior: smooth;
 }
 
+::selection {
+    color: white;
+    background: #5A50FF;
+}
+
 .bg-image{
     background: url("./assets/pfp.png");
 }
