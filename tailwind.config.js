@@ -34,11 +34,11 @@ export default {
   ],
   safelist: [
     {
-      pattern: /(bg|border|text|from|to)-(sky|amber|orange|blue|yellow|cyan|green|red|indigo|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)/,
+      pattern: /(bg|border|text|from|to)-(sky|amber|orange|blue|yellow|cyan|green|red|indigo|violet|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)/,
       variants: ['hover'],
     },
     {
-      pattern: /(from|to)-(sky|orange|blue|yellow|amber|cyan|green|red|indigo|purple|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)\/(30|50)/,
+      pattern: /(from|to)-(sky|orange|blue|yellow|amber|cyan|green|red|indigo|purple|violet|pink|rose|emerald)-(100|200|300|400|500|600|700|800|900)\/(30|50)/,
     },
   ],
 }

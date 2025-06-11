@@ -102,7 +102,7 @@ const Projects = () => {
 
                       <div
                           className="group flex flex-col h-full bg-stone-800/60 shadow-sm rounded-3xl">
-                          <div className="h-52 flex flex-col justify-center items-center bg-indigo-600 rounded-t-xl">
+                          <div className="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
                               <div className="p-6 bg-white rounded-3xl">
                               <EmojiProvider data={emojiData}><Emoji name={project.emoji} className="w-20 md:w-20 lg:w-20 hover:scale-110 transition-all duration-300"/></EmojiProvider>
                               </div>
@@ -111,13 +111,13 @@ const Projects = () => {
 
                           <div className="p-4 md:p-6">
                               <span
-                                  className="block mb-1 text-xs font-semibold text-transparent uppercase bg-clip-text bg-indigo-500 ">{project.powered_by}</span>
+                                  className="block mb-1 text-xs font-semibold text-transparent uppercase bg-clip-text bg-blue-500 ">{project.powered_by}</span>
                               <h3 className="text-2xl font-bold text-white">{project.name}</h3>
                               <p className="mt-3 text-white">{project.description}</p>
                           </div>
                           <div
                               className="mt-auto flex">
-                              <a className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-b-3xl font-medium  text-black bg-white hover:bg-indigo-600 hover:text-stone-900 hover:text-white transition-all duration-300"
+                              <a className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-b-3xl font-medium  text-black bg-white hover:bg-blue-700 hover:text-stone-900 hover:text-white transition-all duration-300"
                                  href={project.link} target="_blank" rel="noopener noreffer"> {project.link_icon_git} {project.link_text}</a>
                           </div>
                       </div>

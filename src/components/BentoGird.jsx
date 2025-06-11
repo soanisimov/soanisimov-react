@@ -6,15 +6,15 @@ import emojiData from "react-apple-emojis/src/data.json";
 
 const BentoGrid = () => {
     const blocks = [
-        { title: 'HTML', colorClass: 'orange',},
+        { title: 'HTML', colorClass: 'blue',},
         { title: 'CSS', colorClass: 'blue' },
-        { title: 'JavaScript', colorClass: 'amber',span: true },
-        { title: 'React', colorClass: 'cyan',span: true },
-        { title: 'Node.js', colorClass: 'green' },
-        { title: 'Tailwind CSS', colorClass: 'sky',},
-        { title: 'Photoshop', colorClass: 'blue' },
-        { title: 'Illustrator', colorClass: 'orange' },
-        { title: 'Figma', colorClass: 'pink',span: true,},
+        { title: 'JavaScript', colorClass: 'blue',span: true },
+        { title: 'React', colorClass: 'indigo',span: true },
+        { title: 'Node.js', colorClass: 'indigo' },
+        { title: 'Tailwind CSS', colorClass: 'indigo',},
+        { title: 'Photoshop', colorClass: 'violet' },
+        { title: 'Illustrator', colorClass: 'violet' },
+        { title: 'Figma', colorClass: 'violet',span: true,},
     ];
 
 
